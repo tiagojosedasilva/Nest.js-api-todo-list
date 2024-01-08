@@ -30,8 +30,8 @@ export class UserService{
     }
 
     post(user: CreateUserDto){
-        this.userRepository.create(user)
-        return this.userRepository.save(user)
+        const newUser = this.userRepository.create(user)
+        return this.userRepository.save(newUser)
     }
 
     update(id: number, user: UpdateUserDto){

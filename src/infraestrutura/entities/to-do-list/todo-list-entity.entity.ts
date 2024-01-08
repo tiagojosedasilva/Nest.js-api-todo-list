@@ -22,4 +22,13 @@ export class TodoListEntity{
 
     @UpdateDateColumn()
     updatedAt: Date;
+
+    constructor(todo?: Partial<TodoListEntity>){
+        this.id = todo?.id;
+        this.IdUser = todo?.IdUser;
+        this.emailUser = todo?.emailUser;
+        this.name = todo?.name;
+        this.createdAt = todo?.createdAt;
+        this.updatedAt = todo?.updatedAt;
+    }
 }
